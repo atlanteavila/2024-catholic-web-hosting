@@ -1,113 +1,66 @@
 import Image from "next/image";
+import CatholicWebHosting from "@/images/catholic-web-hosting-hereo.png";
+import CustomButton from "@/components/CustomButton";
+import Card from "@/components/Card";
+import LogoCloud from "@/components/LogoCloud";
+import Cross from "@/images/cross-tech.png";
+import DomainSearch from "@/components/DomainForm";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="max-w-[1440px] justify-between p-12 pt-32 bg-bg-main m-auto">
+      <div className="flex flex-col md:flex md:flex-row">
+        <div className="full-width md:w-2/5">
+          <h1 className="text-white text-4xl md:pr-8 font-extrabold">Catholic web hosting solutions for your parish, ministry or business</h1>
+          <p className="text-white md:pr-8 mt-6 font-thin text-sm text-justify"><strong><i>Catholic Web Hosting</i></strong>, is dedicated to supporting the Church's mission on the internet by providing reliable and top-notch web hosting services. Our user-friendly tools are designed to help you effectively spread God's word online. Trust us to be your dependable partner for Catholic Web Hosting, ensuring your online ministry is powerful, efficient, and impactful.
+
+          </p>
+          <div className="sm:flex-col md:flex-row mt-8">
+            <CustomButton
+              href="/contact"
+              className="mt-12 bg-[#0d6f89] text-white p-4 px-14 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition duration-300 transform hover:scale-105"
+            >
+              <i className="text-xl">Get started</i>
+            </CustomButton>
+            <CustomButton href="/pricing" className="mt-12 ml-4 bg-transparent text-white p-4 px-4 text-left hover:underline"><i className="text-xl">View plans</i></CustomButton>
+          </div>
+        </div>
+        <div className="hidden md:inline flex-1 ml-20 mt-6 text-center">
+          <Image width={700} height={190} src={CatholicWebHosting} alt="Catholic Web Hosting" />
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="max-w-[1440px]">
+        <h2 className="text-white text-4xl font-extrabold text-center mt-28">Why choose <strong><i>catholic web hosting</i></strong>?</h2>
+        <p className="text-white pr-8 mt-6 font-thin text-sm max-w-2xl m-auto text-center">We are the right service for you. We guarantee it, not just our awesome infrastructure, but our commitment to be the best web hosting company. You are at the fore-front of our mission.</p>
+      </div>
+      <div className="flex space-x-4 mt-16">
+        <Card title="Our faith motivates us" description="Don’t let our faith based approach to business turn you away–This is what binds us to pursue excellence! We strive to provide you with the best Catholic Web Site Hosting possible!" />
+        <Card title="We share your values" description="Our goal is quite honestly to help evangelize what Pope Emeritus Benedict XVI called the digital continent. We are trying to make that as easy as possible! We’re here for Christ and His Church!" />
+        <Card title="Extremely Reliable" description="Our goal is quite honestly to help evangelize what Pope Emeritus Benedict XVI called the digital continent. We are trying to make that as easy as possible! We’re here for Christ and His Church!" />
+        <Card title="99.9% Uptime Guaranteed!" description="Our goal is quite honestly to help evangelize what Pope Emeritus Benedict XVI called the digital continent. We are trying to make that as easy as possible! We’re here for Christ and His Church!" />
+      </div>
+      <div className="flex space-x-4 mt-8">
+        <Card title="Money back guaranteed!" description="Our goal is quite honestly to help evangelize what Pope Emeritus Benedict XVI called the digital continent. We are trying to make that as easy as possible! We’re here for Christ and His Church!" />
+        <Card title="Easily transfer your site" description="Our goal is quite honestly to help evangelize what Pope Emeritus Benedict XVI called the digital continent. We are trying to make that as easy as possible! We’re here for Christ and His Church!" />
+        <Card title="Amazing support. always!" description="Our goal is quite honestly to help evangelize what Pope Emeritus Benedict XVI called the digital continent. We are trying to make that as easy as possible! We’re here for Christ and His Church!" />
+        <Card title="Share and Save Money!" description="Our goal is quite honestly to help evangelize what Pope Emeritus Benedict XVI called the digital continent. We are trying to make that as easy as possible! We’re here for Christ and His Church!" />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="max-w-[1440px]">
+        <h2 className="text-white text-4xl font-extrabold text-center mt-28"> Everything needed to help you achieve your goals!</h2>
+        <p className="text-white pr-8 mt-6 font-thin text-sm max-w-2xl m-auto text-center">We are the right service for you. We guarantee it, not just our awesome servers,
+          But our commitment to be the best web hosting company, religious based or
+          otherwise, you are at the fore-front!</p>
       </div>
-    </main>
+      <div className="max-w-[1440px]">
+        <div className="flex space-x-4 mt-16">
+          <Card classes="flex-1" title="Free Domain" description="We offer a free domain with all our hosting plans." withIcon />
+          <Card classes="flex-1" title="Free SSL Certificate" description="We offer a free SSL certificate with all our hosting plans." withIcon />
+          <Card classes="flex-1" title="Free Website Builder" description="We offer a free website builders with all our hosting plans." withIcon />
+          <Card classes="flex-1" title="Free Email" description="We offer free email with all our hosting plans." withIcon />
+        </div>
+      </div>
+      <LogoCloud />
+    </div >
   );
 }
