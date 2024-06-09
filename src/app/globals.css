@@ -8,3 +8,29 @@
 html, body {
   font-family: 'Fira Sans', sans-serif;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.bg-bg-main {
+  background-color: #1a202c; /* Dark background color */
+}
+
+.relative {
+  position: relative;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}

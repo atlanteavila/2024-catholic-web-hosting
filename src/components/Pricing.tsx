@@ -1,82 +1,31 @@
 import { Fragment } from 'react'
 import { CheckIcon, MinusIcon } from '@heroicons/react/20/solid'
+import { FadeIn } from './FadeIn'
 
-const tiers = [
-  {
-    name: 'Basic',
-    id: 'tier-basic',
-    href: '#',
-    priceMonthly: '$5.99',
-    description: 'Quis suspendisse ut fermentum neque vivamus non tellus.',
-    mostPopular: false,
-  },
-  {
-    name: 'Essential',
-    id: 'tier-essential',
-    href: '#',
-    priceMonthly: '$10.99',
-    description: 'Quis eleifend a tincidunt pellentesque. A tempor in sed.',
-    mostPopular: true,
-  },
-  {
-    name: 'Premium',
-    id: 'tier-premium',
-    href: '#',
-    priceMonthly: '$15.99',
-    description: 'Orci volutpat ut sed sed neque, dui eget. Quis tristique non.',
-    mostPopular: false,
-  },
-]
-const sections = [
-  {
-    name: 'Features',
-    features: [
-      { name: 'Diskspace', tiers: { Basic: '4GB', Essential: '12GB', Premium: 'Unlimited' } },
-      { name: 'Bandwidth', tiers: { Basic: 'Unlimited', Essential: 'Unlimited', Premium: 'Unlimited' } },
-      { name: 'Email Accounts', tiers: { Basic: '5', Essential: '10', Premium: 'Unlimited' } },
-      { name: 'MySql Databases', tiers: { Basic: '1', Essential: '5', Premium: 'Unlimited' } },
-    ],
-  },
-  {
-    name: 'Software',
-    features: [
-      { name: 'Freee SSL', tiers: { Basic: true, Essential: true, Premium: true } },
-      { name: 'Freee Script Installer', tiers: { Basic: true, Essential: true, Premium: true } },
-      { name: 'Free WordPress Installer', tiers: { Essential: true, Premium: true } },
-      { name: 'Divi WordPress Builder', tiers: { Essential: true, Premium: true } },
-    ],
-  },
-  {
-    name: 'Support',
-    features: [
-      { name: '30 Day Money Back', tiers: { Basic: true, Essential: true, Premium: true } },
-      { name: '24/7 online support', tiers: { Basic: true, Essential: true, Premium: true } },
-      { name: 'Priority Support', tiers: { Premium: true } },
-    ],
-  },
-]
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Pricing() {
+export default function Pricing({ tiers, sections }: { tiers: any[]; sections: any[]; }) {
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
+        <FadeIn className="mx-auto max-w-4xl text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Pricing</h2>
           <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Plans that will fit all needs!
           </p>
-        </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
-          Our plans start at low cost for those getting started, and increase at very competitive rates for those who need more. We offer a 30 day money back guarantee, so you can try us out risk free! Try Catholic Web Hosting today!
-        </p>
+        </FadeIn>
+        <FadeIn className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
+          <p>
+            Our plans start at low cost for those getting started, and increase at very competitive rates for those who need more. We offer a 30 day money back guarantee, so you can try us out risk free! Try Catholic Web Hosting today!
+          </p>
+        </FadeIn>
 
         {/* xs to lg */}
-        <div className="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
-          {tiers.map((tier) => (
+        <FadeIn className="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
+          {tiers.map((tier: any) => (
             <section
               key={tier.id}
               className={classNames(
@@ -104,7 +53,7 @@ export default function Pricing() {
                 Buy plan
               </a>
               <ul role="list" className="mt-10 space-y-4 text-sm leading-6 text-white">
-                {sections.map((section) => (
+                {sections.map((section: any) => (
                   <li key={section.name}>
                     <ul role="list" className="space-y-4">
                       {section.features.map((feature: any) =>
@@ -126,17 +75,17 @@ export default function Pricing() {
               </ul>
             </section>
           ))}
-        </div>
+        </FadeIn>
 
         {/* lg+ */}
-        <div className="isolate mt-20 hidden lg:block">
+        <FadeIn className="isolate mt-20 hidden lg:block">
           <div className="relative -mx-8">
-            {tiers.some((tier) => tier.mostPopular) ? (
+            {tiers.some((tier: any) => tier.mostPopular) ? (
               <div className="absolute inset-x-4 inset-y-0 -z-10 flex">
                 <div
                   className="flex w-1/4 px-4"
                   aria-hidden="true"
-                  style={{ marginLeft: `${(tiers.findIndex((tier) => tier.mostPopular) + 1) * 25}%` }}
+                  style={{ marginLeft: `${(tiers.findIndex((tier: any) => tier.mostPopular) + 1) * 25}%` }}
                 >
                   <div className="w-full rounded-t-xl border-x border-t border-white/10 bg-white/5" />
                 </div>
@@ -153,7 +102,7 @@ export default function Pricing() {
               <thead>
                 <tr>
                   <td />
-                  {tiers.map((tier) => (
+                  {tiers.map((tier: any) => (
                     <th key={tier.id} scope="col" className="px-6 pt-6 xl:px-8 xl:pt-8">
                       <div className="text-sm font-semibold leading-7 text-white">{tier.name}</div>
                     </th>
@@ -165,7 +114,7 @@ export default function Pricing() {
                   <th scope="row">
                     <span className="sr-only">Price</span>
                   </th>
-                  {tiers.map((tier) => (
+                  {tiers.map((tier: any) => (
                     <td key={tier.id} className="px-6 pt-2 xl:px-8">
                       <div className="flex items-baseline gap-x-1 text-white">
                         <span className="text-4xl font-bold">{tier.priceMonthly}</span>
@@ -185,7 +134,7 @@ export default function Pricing() {
                     </td>
                   ))}
                 </tr>
-                {sections.map((section, sectionIdx) => (
+                {sections.map((section: any, sectionIdx: any) => (
                   <Fragment key={section.name}>
                     <tr>
                       <th
@@ -234,7 +183,7 @@ export default function Pricing() {
               </tbody>
             </table>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </div>
   )

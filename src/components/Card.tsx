@@ -1,5 +1,6 @@
 import PlusIcon from '@/images/+-icon.png';
 import Image from 'next/image';
+import { FadeIn } from './FadeIn';
 type CardProps = {
   title: string;
   description: string;
